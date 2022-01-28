@@ -1,0 +1,7 @@
+%marginPaddingStandard {
+    @include setMarginAndPadding(10px, 10px);
+}
+
+%marginPaddingZero {
+    @include setMarginAndPadding(0, 0);
+}
