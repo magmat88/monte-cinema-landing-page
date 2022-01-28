@@ -3,5 +3,11 @@
 @import "../../styles/variables/variables.scss";
 
 .nav-bar {
-    @extend %rowCentered;
+    @extend %rowSpaceBetween;
+    width: 90vh;
+
+
+    .btns-container {
+        @extend %rowRight;
+    }
 }
