@@ -3,7 +3,6 @@
 @import "../../styles/variables/variables.scss";
 
 .main-content {
-    @extend %columnSpaceBetween;
-    width: 90vh;
-    height: 100vh;
+    @extend %columnCentered;
+    width: 90%;
 }

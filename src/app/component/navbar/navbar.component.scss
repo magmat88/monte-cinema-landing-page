@@ -4,10 +4,27 @@
 
 .nav-bar {
     @extend %rowSpaceBetween;
-    width: 90vh;
+    @extend %marginPaddingStandard;
 
+    width: 95%;
+
+    .btn {
+        @extend %btn;
+    }
+
+    .btn-contrast {
+        @extend %btn-contrast;
+    }
+
+    .btn-light {
+        @extend %btn-light;
+    }
 
     .btns-container {
         @extend %rowRight;
+    }
+
+    .logo {
+        @extend %marginPaddingZero;
     }
 }

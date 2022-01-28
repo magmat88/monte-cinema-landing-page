@@ -1,1 +1,12 @@
+@import "../mixins/mixins.scss";
+@import "../variables/variables.scss";
 
+%paletteLightContrast {
+    background-color: $color_white;
+    color: $color_contrast;
+}
+
+%paletteContrastLight {
+    color: $color_white;
+    background-color: $color_contrast;
+}

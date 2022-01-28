@@ -1,0 +1,28 @@
+@import "./colorPalettes.scss";
+
+%btn {
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-family: $font-roboto;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 30px;
+
+    &:active {
+        border: 5px solid $color_alert;
+        margin: 5px;
+    }
+}
+
+%btn-light {
+    @extend %paletteLightContrast;
+}
+
+%btn-contrast {
+    @extend %paletteContrastLight;
+
+    &:hover {
+        background-color: $color_contrast-dark;
+    }
+}
