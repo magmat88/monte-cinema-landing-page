@@ -1,0 +1,16 @@
+@mixin setFlexDisplay($direction, $justify, $align) {
+    align-items: $align;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin setMarginAndPadding($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin setColorPalette($colorBackground, $colorText) {
+    background-color: $colorBackground;
+    color: $colorText;
+}

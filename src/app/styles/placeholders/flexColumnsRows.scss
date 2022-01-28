@@ -1,0 +1,7 @@
+%columnCentered {
+    @include setFlexDisplay(column, center, center);
+}
+
+%rowCentered {
+    @include setFlexDisplay(row, center, center);
+}

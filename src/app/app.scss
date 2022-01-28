@@ -1,0 +1,7 @@
+@import "../app/styles/mixins/mixins.scss";
+@import "../app/styles/placeholders/placeholders.scss";
+@import "../app/styles/variables/variables.scss";
+
+.app {
+    @extend %columnCentered;
+}
