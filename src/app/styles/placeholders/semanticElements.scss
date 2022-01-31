@@ -4,10 +4,21 @@
     border-radius: 50px;
     border: none;
     cursor: pointer;
-    font-family: $font-roboto;
-    font-size: 16px;
-    margin: 10px;
-    padding: 10px 30px;
+    font-family: $font-btn;
+    font-size: 22px;
+    margin-bottom: 41px;
+    width: 310px;
+    height: 64px;
+
+    @mixin forMediumScreens($breakpoint-medium, $breakpoint-large) {
+        width: 256px;
+    }
+
+    @include forLargeScreens($breakpoint-large) {
+        width: 256px;
+        margin: 10px;
+        padding: 10px 30px;
+    }
 
     &:active {
         border: 5px solid $color_alert;
@@ -15,12 +26,12 @@
     }
 }
 
-%btn-light {
-    @extend %paletteLightContrast;
+%btn-white {
+    @extend %paletteWhiteContrast;
 }
 
 %btn-contrast {
-    @extend %paletteContrastLight;
+    @extend %paletteContrastWhite;
 
     &:hover {
         background-color: $color_contrast-dark;

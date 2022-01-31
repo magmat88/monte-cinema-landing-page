@@ -5,23 +5,31 @@
 .nav-bar {
     @extend %rowSpaceBetween;
     @extend %marginPaddingStandard;
-
-    width: 95%;
+    width: 90%;
 
     .btn {
         @extend %btn;
+        font-size: 16px;
+        height: 48px;
+        width: 110px;
     }
 
     .btn-contrast {
         @extend %btn-contrast;
+        width: 110px;
     }
 
-    .btn-light {
-        @extend %btn-light;
+    .btn-white {
+        @extend %btn-white;
+        width: 140px;
     }
 
     .btns-container {
-        @extend %rowRight;
+        display: none;
+    
+        @include forLargeScreens($breakpoint-large) {
+            display: flex;
+        }
     }
 
     .logo {

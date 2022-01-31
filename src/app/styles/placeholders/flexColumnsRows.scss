@@ -2,6 +2,14 @@
     @include setFlexDisplay(column, center, center);
 }
 
+%columnLeft {
+    @include setFlexDisplay(column, flex-start, center);
+}
+
+%columnSpaceAround {
+    @include setFlexDisplay(column, space-around, center);
+}
+
 %columnSpaceBetween {
     @include setFlexDisplay(column, space-between, center);
 }
