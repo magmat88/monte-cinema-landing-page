@@ -8,7 +8,7 @@ export function NavBar(): JSX.Element {
             <figure className="logo">{monteCinemaLogo}</figure>
             <div className="btns-container">
                 <button
-                    className="btn btn-light"
+                    className="btn btn-white"
                     onClick={() => console.log('register on click')}
                 >
                     Register

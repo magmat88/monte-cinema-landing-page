@@ -4,4 +4,121 @@
 
 .welcome {
     @extend %rowCentered;
+    @extend %marginPaddingZero;
+    height: 570px;
+    width: 100%;
+
+    @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+        height: 600px;
+        margin: 0, 48px;
+        width: 90%;
+    }
+
+    @include forLargeScreens($breakpoint-large) {
+        height: 680px;
+        margin: 0, 48px;
+        width: 90%;
+    }
+
+    .btn {
+        @extend %btn;
+    }
+
+    .btn-container {
+        @extend %columnCentered;
+        width: 100%;
+
+        @include forLargeScreens($breakpoint-large) {
+            align-items: flex-start;
+            margin-left: 160px;
+        }
+    }
+
+    .btn-contrast {
+        @extend %btn-contrast;
+
+        @include forLargeScreens($breakpoint-large) {
+            margin: 0 0 80px 0;
+        }
+    }
+
+    .image {
+        @extend %marginPaddingZero;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .image-big {
+        @extend %marginPaddingZero;
+        @extend %rowCentered;
+        display: none;
+        height: 100%;
+        position: relative;
+        width: 50%;
+
+        @include forLargeScreens($breakpoint-large) {
+            display: flex;
+        }
+    }
+
+    .text-content {
+        @extend %columnSpaceAround;
+        @extend %marginPaddingZero;
+        @extend %paletteLightDark;
+        height: 100%;
+        width: 100%;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            justify-content: center;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            width: 50%;
+        }
+    }
+
+    .text-description {
+        font-family: $font-description;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 37.4px;
+        padding: 0 20px 20px 20px;
+        text-align: center;
+
+        @include forLargeScreens($breakpoint-large) {
+            font-size: 22px;
+            padding: 0 80px 20px 80px;
+            text-align: left;
+        }
+    }
+
+    .text-large {
+        align-self: stretch;
+        font-family: $font-header;
+        font-size: 48px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        line-height: 102%;
+        margin: 0;
+        padding: 41px;
+        text-align: center;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            font-size: 80px;
+            line-height: 81.6px;
+            margin: 0 160px 0 160px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            font-family: $font-header;
+            font-size: 80px;
+            font-weight: 600;
+            line-height: 102%;
+            margin: 0;
+            padding: 80px 80px 20px 80px;
+            text-align: left;
+        }
+    }
 }

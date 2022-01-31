@@ -14,3 +14,15 @@
     background-color: $colorBackground;
     color: $colorText;
 }
+
+@mixin forLargeScreens($breakpointLarge) {
+    @media only screen and (min-width: $breakpointLarge) {
+      @content;
+    }
+  }
+  
+  @mixin forMediumScreens($breakpointMedium, $breakpointLarge) {
+    @media only screen and (min-width: $breakpointMedium) and (max-width: $breakpointLarge) {
+      @content;
+    }
+  }

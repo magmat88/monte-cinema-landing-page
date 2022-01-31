@@ -4,5 +4,15 @@
 
 .main-content {
     @extend %columnCentered;
-    width: 90%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    @include forMediumScreens($breakpoint-small, $breakpoint-medium) {
+        width: 90%;
+    }
+
+    @include forLargeScreens($breakpoint-large) {
+        width: 90%;
+    }
 }
