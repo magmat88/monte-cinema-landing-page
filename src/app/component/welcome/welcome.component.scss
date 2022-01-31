@@ -55,7 +55,6 @@
         @extend %rowCentered;
         display: none;
         height: 100%;
-        position: relative;
         width: 50%;
 
         @include forLargeScreens($breakpoint-large) {
