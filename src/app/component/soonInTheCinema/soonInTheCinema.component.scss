@@ -4,5 +4,103 @@
 
 .soon-in-the-cinema {
     @extend %columnCentered;
+    width: 90%;
 
+    .header-container {
+        @extend %rowSpaceBetween;
+        font-family: $font_description;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.015em;
+        line-height: 37px;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .header-contrast {
+        @extend %rowSpaceBetween;
+        color: $color_contrast;
+    }
+
+    .header-dark {
+        @extend %rowSpaceBetween;
+    }
+
+    .image {
+        @extend %marginPaddingZero;
+        height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .image-small {
+        @extend %marginPaddingZero;
+        @extend %rowCentered;
+        height: 155px;
+        width: 263px;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            width: 364px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            width: 340px;
+        }
+    }
+
+    .movie {
+        @extend %articleBoxShadow;
+        @extend %columnSpaceBetween;
+        border-radius: 8px;
+        font-family: $font_standard;
+        height: 403px;
+        margin: 24px 0;
+        width: 311px;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            height: 435px;
+            width: 421px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            height: 435px;
+            width: 421px;
+        }
+
+        &:last-of-type {
+            @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+                display: none;
+            }
+        }
+
+        h3 {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 42px;
+            margin: 20px;
+            padding-left: 50px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 31px;
+            padding: 0 24px 24px 24px;
+        }
+    }
+
+    .movies-container {
+        @extend %columnSpaceAround;
+        width: 100%;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            flex-direction: row;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            flex-direction: row;
+        }
+    }
 }

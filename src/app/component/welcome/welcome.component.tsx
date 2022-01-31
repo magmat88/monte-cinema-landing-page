@@ -1,5 +1,4 @@
 import React from 'react';
-// import audience from '../../images/audience.jpg';
 import './welcome.component.scss';
 
 export function Welcome(): JSX.Element {
@@ -17,6 +16,7 @@ export function Welcome(): JSX.Element {
                     <button className="btn btn-contrast">Book a ticket</button>
                 </div>
             </article>
+            
             <figure className="image-big">
                 <img
                     className="image"
