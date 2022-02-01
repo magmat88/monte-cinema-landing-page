@@ -13,7 +13,7 @@ export function Welcome(): JSX.Element {
                     doesn't exist. Yikes.
                 </h3>
                 <div className="btn-container">
-                    <button className="btn btn-contrast">Book a ticket</button>
+                    <button className="btn btn-contrast"><a href="#email">Book a ticket</a></button>
                 </div>
             </article>
             

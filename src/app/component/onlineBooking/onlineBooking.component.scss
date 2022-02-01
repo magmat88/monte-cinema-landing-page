@@ -39,7 +39,7 @@
     .inputField {
         background-color: $color_light-input;
         border-radius: 8px;
-        border: none;
+        border: 1px solid $color_light-input;
         color: $color_grey;
         font-family: $font_standard;
         font-size: 17px;
@@ -56,6 +56,18 @@
         @include forLargeScreens($breakpoint-large) {
             padding-left: 20px;
             width: 452px;
+        }
+
+        &:hover {
+            background-color: $color_light-grey-input;
+            border: 1px solid $color_light-grey-input;
+
+        }
+
+        &:focus, &:active {
+            outline: none;
+            border: 1px solid $color_active;
+            background-color: $color_active-light;
         }
     }
 
@@ -99,6 +111,7 @@
         width: 100%;
     }
 
+    
     h1 {
         font-family: $font_header;
         font-size: 40px;
@@ -124,4 +137,9 @@
         font-size: 22px;
         line-height: 37px;
     }
+
+    .hidden {
+        display: none;
+    }
 }
+

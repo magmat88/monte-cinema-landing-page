@@ -36,6 +36,11 @@
     &:hover {
         background-color: $color_contrast-dark;
     }
+
+    a {
+        color: $color_white;
+        text-decoration: none;
+    }
 }
 
 %articleBoxShadow {
