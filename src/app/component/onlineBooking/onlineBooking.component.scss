@@ -2,13 +2,32 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.online-booking {
+.booking {
     @extend %columnCentered;
     margin: 80px 0 120px 0;
     width: 90%;
 
-    .btn {
+    .booking__text--description {
+        @extend %text-description;
+    }
+
+    .booking__text--large {
+        @extend %text-large;
+    }
+
+    .form {
+        @extend %columnCentered;
+    }
+
+    .form__btn {
         @extend %btn;
+    }
+
+    .form__btn--contrast {
+        @extend %btn-contrast;
+    }
+
+    .form__btn--text-small {
         font-size: 14px;
 
         @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
@@ -20,27 +39,26 @@
         }
     }
 
-    .btn-contrast {
-        @extend %btn-contrast;
-        width: 271px;
+    .form__btn--wide {
         height: 56px;
+        width: 271px;
+        margin: 0 0 80px 0;
 
         @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
-            margin: 0 0 80px 0;
             width: 472px;
         }
 
         @include forLargeScreens($breakpoint-large) {
-            margin: 0 0 80px 0;
             width: 472px;
         }
     }
 
-    .inputField {
-        background-color: $color_light-input;
+    .form--hidden {
+        display: none;
+    }
+
+    .form__input {
         border-radius: 8px;
-        border: none;
-        color: $color_grey;
         font-family: $font_standard;
         font-size: 17px;
         height: 55px;
@@ -49,16 +67,30 @@
         width: 251px;
 
         @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
-            padding-left: 20px;
             width: 452px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            width: 452px;
+        }
+
+        &:focus {
+            margin: 9px 39px 39px 39px;
+        }
+    }
+
+    .form__input--grey-blue {
+        background-color: $color_light-input;
+        border: none;
+        color: $color_grey;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
             &:hover {
                 background-color: $color_light-grey-input;
             }
         }
 
         @include forLargeScreens($breakpoint-large) {
-            padding-left: 20px;
-            width: 452px;
             &:hover {
                 background-color: $color_light-grey-input;
             }
@@ -68,12 +100,17 @@
             outline: none;
             border: 1px solid $color_active;
             background-color: $color_active-light;
-            margin: 9px 39px 39px 39px;
         }
+    }
 
-        
+    .form__label {
+        margin: 0 0 0 80px;
+    }
 
-        
+    .form__label--alert {
+        @extend %text-label;
+        color: $color_alert;
+        font-size: 14px;
     }
 
     .notification {
@@ -92,51 +129,9 @@
             border-radius: 24px;
             width: 480px;
         }
-
-        p {
-            font-family: $font_standard;
-            font-size: 24px;
-            line-height: 37px;
-            text-align: center;
-        }
     }
 
-    .notification-form {
-        @extend %columnCentered;
-    }
-
-    .notification-label {
-        color: $color_alert;
-        font-family: $font_description;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 18px;
-        margin: 0 0 0 80px;
-        text-transform: uppercase;
-        width: 100%;
-    }
-
-    
-    .text-large {
-        @extend %text-header;
-        line-height: 41px;
-
-        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
-            line-height: 82px;
-        }
-
-        @include forLargeScreens($breakpoint-large) {
-            line-height: 82px;
-        }
-    }
-
-    .text-description {
-        font-family: $font_description;
-        font-size: 22px;
-        line-height: 37px;
-    }
-
-    .hidden {
-        display: none;
+    .notification__text--standard {
+        @extend %text-standard;
     }
 }

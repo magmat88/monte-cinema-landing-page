@@ -8,13 +8,10 @@
 
     .header-container {
         @extend %rowSpaceBetween;
-        font-family: $font_description;
+        @extend %text-label;
+
         font-size: 22px;
-        font-weight: 700;
         letter-spacing: 0.015em;
-        line-height: 37px;
-        text-transform: uppercase;
-        width: 100%;
     }
 
     .header-contrast {

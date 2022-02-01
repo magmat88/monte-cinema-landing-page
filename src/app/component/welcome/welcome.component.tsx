@@ -4,8 +4,8 @@ import './welcome.component.scss';
 export function Welcome(): JSX.Element {
     return (
         <section className="welcome">
-            <article className="text-content">
-                <h1 className="text-large">
+            <article className="welcome__text">
+                <h1 className="welcome__text welcome__text--large">
                     Welcome to the best cinema in Monterail
                 </h1>
                 <h3 className="text-description">

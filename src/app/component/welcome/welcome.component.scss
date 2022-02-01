@@ -58,7 +58,7 @@
         }
     }
 
-    .text-content {
+    .welcome__text {
         @extend %columnSpaceAround;
         @extend %marginPaddingZero;
         @extend %paletteLightDark;
@@ -75,10 +75,7 @@
     }
 
     .text-description {
-        font-family: $font-description;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 37px;
+        @extend %text-description;
         padding: 0 20px 20px 20px;
         text-align: center;
 
@@ -89,7 +86,7 @@
     }
 
     .text-large {
-        @extend %text-header;
+        @extend %text-large;
         align-self: stretch;
         letter-spacing: -0.01em;
         line-height: 82px;
