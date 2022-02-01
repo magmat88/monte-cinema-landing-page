@@ -2,48 +2,25 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.soon-in-the-cinema {
+.announcement {
     @extend %columnCentered;
     width: 90%;
+    margin: 80px 0;
 
-    .header-container {
+    .announcement__labels {
         @extend %rowSpaceBetween;
-        @extend %text-label;
-
+        @extend %textLabel;
         font-size: 22px;
         letter-spacing: 0.015em;
     }
 
-    .header-contrast {
+    .announcement__label--contrast {
         @extend %rowSpaceBetween;
         color: $color_contrast;
     }
 
-    .header-dark {
+    .announcement__label--dark {
         @extend %rowSpaceBetween;
-    }
-
-    .image {
-        @extend %marginPaddingZero;
-        height: 100%;
-        max-height: 100%;
-        object-fit: cover;
-        width: 100%;
-    }
-
-    .image-small {
-        @extend %marginPaddingZero;
-        @extend %rowCentered;
-        height: 155px;
-        width: 263px;
-
-        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
-            width: 364px;
-        }
-
-        @include forLargeScreens($breakpoint-large) {
-            width: 340px;
-        }
     }
 
     .movie {
@@ -71,7 +48,7 @@
             }
         }
 
-        h3 {
+        .movie__title {
             font-size: 36px;
             font-weight: 700;
             line-height: 42px;
@@ -80,7 +57,7 @@
             width: 100%;
         }
 
-        p {
+        .movie__description {
             font-size: 18px;
             font-weight: 400;
             line-height: 31px;
@@ -88,7 +65,27 @@
         }
     }
 
-    .movies-container {
+    .movie__image--fitted {
+        @extend %marginPaddingZero;
+        @extend %imgFitted;
+    }
+
+    .movie__image--small {
+        @extend %marginPaddingZero;
+        @extend %rowCentered;
+        height: 155px;
+        width: 263px;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            width: 364px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            width: 340px;
+        }
+    }
+
+    .movies {
         @extend %columnSpaceAround;
         width: 100%;
 

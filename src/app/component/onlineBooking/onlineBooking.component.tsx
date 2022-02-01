@@ -9,7 +9,7 @@ export function OnlineBooking(): JSX.Element {
         const message = document.createElement('p');
         document.querySelector('form')!.className = 'form--hidden';
         message.innerHTML = 'The email has been added to the list.';
-        message.setAttribute('className', 'text-standard');
+        message.setAttribute('className', 'text--standard');
         notification.appendChild(message);
     }
 

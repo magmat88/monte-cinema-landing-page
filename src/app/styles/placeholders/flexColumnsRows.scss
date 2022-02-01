@@ -1,3 +1,5 @@
+@import '../mixins/mixins.scss';
+
 %columnCentered {
     @include setFlexDisplay(column, center, center);
 }
@@ -17,6 +19,7 @@
 %rowCentered {
     @include setFlexDisplay(row, center, center);
 }
+
 %rowRight {
     @include setFlexDisplay(row, flex-end, center);
 }

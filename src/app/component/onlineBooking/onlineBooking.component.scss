@@ -8,11 +8,13 @@
     width: 90%;
 
     .booking__text--description {
-        @extend %text-description;
+        @extend %textDescription;
+        margin-top: 0;
     }
 
     .booking__text--large {
-        @extend %text-large;
+        @extend %textLarge;
+        margin-bottom: 0;
     }
 
     .form {
@@ -24,7 +26,7 @@
     }
 
     .form__btn--contrast {
-        @extend %btn-contrast;
+        @extend %btnContrast;
     }
 
     .form__btn--text-small {
@@ -108,7 +110,7 @@
     }
 
     .form__label--alert {
-        @extend %text-label;
+        @extend %textLabel;
         color: $color_alert;
         font-size: 14px;
     }
@@ -131,7 +133,8 @@
         }
     }
 
-    .notification__text--standard {
-        @extend %text-standard;
+    .notification__text--standard,
+    .text--standard {
+        @extend %textStandard;
     }
 }

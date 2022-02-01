@@ -1,7 +1,7 @@
 @import "../variables/variables.scss";
 @import "../mixins/mixins.scss";
 
-%text-large {
+%textLarge {
     font-family: $font_header;
     font-size: 40px;
     font-weight: 600;
@@ -18,20 +18,20 @@
     }
 }
 
-%text-description {
+%textDescription {
     font-family: $font_description;
     font-size: 22px;
     line-height: 37px;
 }
 
-%text-standard {
+%textStandard {
     font-family: $font_standard;
     font-size: 24px;
     line-height: 37px;
     text-align: center;
 }
 
-%text-label {
+%textLabel {
     font-family: $font_description;
     text-transform: uppercase;
     font-weight: 700;

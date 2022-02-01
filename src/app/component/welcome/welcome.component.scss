@@ -3,50 +3,48 @@
 @import "../../styles/variables/variables.scss";
 
 .welcome {
-    @extend %rowCentered;
     @extend %marginPaddingZero;
+    @extend %rowCentered;
     height: 570px;
     width: 100%;
 
+
     @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
         height: 600px;
-        margin: 80px, 48px;
         width: 90%;
     }
 
     @include forLargeScreens($breakpoint-large) {
         height: 680px;
-        margin: 80px 48px;
         width: 90%;
     }
 
-    .btn {
+    .welcome__btn {
         @extend %btn;
     }
 
-    .btn-container {
+    .welcome__btn--aligned {
         @extend %columnCentered;
+        height: 64px;
         width: 100%;
 
         @include forLargeScreens($breakpoint-large) {
             align-items: flex-start;
-            margin-left: 80px;
+            margin-left: 160px;
         }
     }
 
-    .btn-contrast {
-        @extend %btn-contrast;
+    .welcome__btn--contrast {
+        @extend %btnContrast;
+        margin: 0 0 80px 0;
     }
 
-    .image {
+    .welcome__image--fitted {
+        @extend %imgFitted;
         @extend %marginPaddingZero;
-        height: 100%;
-        max-height: 100%;
-        object-fit: cover;
-        width: 100%;
     }
 
-    .image-big {
+    .welcome__image--large {
         @extend %marginPaddingZero;
         @extend %rowCentered;
         display: none;
@@ -74,28 +72,39 @@
         }
     }
 
-    .text-description {
-        @extend %text-description;
-        padding: 0 20px 20px 20px;
+    .welcome__text--description {
+        @extend %textDescription;
+        padding: 0 20px 40px 20px;
         text-align: center;
 
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            margin: 0 160px 40px 160px;
+        }
+
         @include forLargeScreens($breakpoint-large) {
-            padding: 0 80px;
+            padding: 0 80px 40px 80px;
             text-align: left;
         }
     }
 
-    .text-large {
-        @extend %text-large;
+    .welcome__text--large {
+        @extend %textLarge;
         align-self: stretch;
         letter-spacing: -0.01em;
-        line-height: 82px;
+        line-height: 49px;
         margin: 0;
-        padding: 41px;
+        padding: 40px;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            line-height: 82px;
+            margin: 0 160px;
+        }
 
         @include forLargeScreens($breakpoint-large) {
-            padding: 40px;
             text-align: left;
+            line-height: 82px;
+            margin: 80px 80px 0 80px;
+            padding: 0;
         }
     }
 }
