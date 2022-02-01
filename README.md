@@ -1,3 +1,7 @@
+# See this project on GitHub Pages:
+
+https://magmat88.github.io/monte-cinema-landing-page
+
 # Node version
 
 Use node version v16.13.0
