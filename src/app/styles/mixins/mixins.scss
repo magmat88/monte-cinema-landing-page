@@ -1,28 +1,30 @@
+@import "../variables/variables.scss";
+
 @mixin setFlexDisplay($direction, $justify, $align) {
-    align-items: $align;
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
+  align-items: $align;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
 }
 
 @mixin setMarginAndPadding($margin, $padding) {
-    margin: $margin;
-    padding: $padding;
+  margin: $margin;
+  padding: $padding;
 }
 
 @mixin setColorPalette($colorBackground, $colorText) {
-    background-color: $colorBackground;
-    color: $colorText;
+  background-color: $colorBackground;
+  color: $colorText;
 }
 
 @mixin forLargeScreens($breakpointLarge) {
-    @media only screen and (min-width: $breakpointLarge) {
-      @content;
-    }
+  @media only screen and (min-width: $breakpointLarge) {
+    @content;
   }
-  
-  @mixin forMediumScreens($breakpointMedium, $breakpointLarge) {
-    @media only screen and (min-width: $breakpointMedium) and (max-width: $breakpointLarge) {
-      @content;
-    }
+}
+
+@mixin forMediumScreens($breakpointMedium, $breakpointLarge) {
+  @media only screen and (min-width: $breakpointMedium) and (max-width: $breakpointLarge) {
+    @content;
   }
+}

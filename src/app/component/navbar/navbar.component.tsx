@@ -4,17 +4,17 @@ import './navbar.component.scss';
 
 export function NavBar(): JSX.Element {
     return (
-        <nav className="nav-bar">
-            <figure className="logo">{monteCinemaLogo}</figure>
-            <div className="btns-container">
+        <nav className="navbar">
+            <figure className="navbar__logo">{monteCinemaLogo}</figure>
+            <div className="navbar__btns--large-display">
                 <button
-                    className="btn btn-white"
+                    className="navbar__btn--white"
                     onClick={() => console.log('register on click')}
                 >
                     Register
                 </button>
                 <button
-                    className="btn btn-contrast"
+                    className="navbar__btn--contrast"
                     onClick={() => console.log('login on click')}
                 >
                     Login

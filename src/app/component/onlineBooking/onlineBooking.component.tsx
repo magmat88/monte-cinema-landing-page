@@ -5,35 +5,41 @@ import './onlineBooking.component.scss';
 export function OnlineBooking(): JSX.Element {
     function onClickHandler(event: React.SyntheticEvent) {
         event.preventDefault();
-        document.querySelector('form')!.className = 'hidden';
-        const message = document.createElement('p');
-        message.innerHTML = "The email has been added to the list.";
         const notification = document.getElementById('notification')!;
+        const message = document.createElement('p');
+        document.querySelector('form')!.className = 'form--hidden';
+        message.innerHTML = 'The email has been added to the list.';
+        message.setAttribute('className', 'text--standard');
         notification.appendChild(message);
     }
 
     return (
-        <section className="online-booking">
-            <h1>Online booking</h1>
-            <p>Soon</p>
+        <section className="booking">
+            <h1 className="booking__text--large">Online booking</h1>
+            <p className="booking__text--description">Soon</p>
 
             <article className="notification" id="notification">
-                <figure className="logo">{monteCinemaLogo}</figure>
-                <p>
+                <figure>{monteCinemaLogo}</figure>
+                <p className="notification__text--standard">
                     Leave us your email address and we'll let you know as soon
                     as the machine will start.
                 </p>
-                <form className="notification-form">
-                    <label htmlFor="email" className="notification-label">
+                <form className="form">
+                    <label htmlFor="email" className="form__label form__label--alert">
                         Email
                     </label>
                     <input
-                        type="text"
+                        className="form__input form__input--grey-blue"
                         id="email"
-                        className="inputField"
                         placeholder="e.g. mynameislaura@mail.com"
+                        type="text"
                     />
-                    <button className="btn btn-contrast" onClick={onClickHandler}>Let me know!</button>
+                    <button
+                        className="form__btn form__btn--contrast form__btn--text-small form__btn--wide"
+                        onClick={onClickHandler}
+                    >
+                        Let me know!
+                    </button>
                 </form>
             </article>
         </section>

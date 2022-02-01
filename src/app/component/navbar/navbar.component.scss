@@ -2,37 +2,32 @@
 @import "../../styles/placeholders/placeholders.scss";
 @import "../../styles/variables/variables.scss";
 
-.nav-bar {
+.navbar {
     @extend %rowSpaceBetween;
     @extend %marginPaddingStandard;
     width: 90%;
 
-    .btn {
+    .navbar__btn--contrast {
         @extend %btn;
+        @extend %btnContrast;
         font-size: 16px;
-        height: 48px;
-        width: 110px;
     }
 
-    .btn-contrast {
-        @extend %btn-contrast;
-        width: 110px;
-    }
-
-    .btn-white {
-        @extend %btn-white;
-        width: 140px;
-    }
-
-    .btns-container {
+    .navbar__btns--large-display {
         display: none;
-    
+
         @include forLargeScreens($breakpoint-large) {
             display: flex;
         }
     }
 
-    .logo {
+    .navbar__btn--white {
+        @extend %btn;
+        @extend %btnWhite;
+        font-size: 16px;
+    }
+
+    .navbar__logo {
         @extend %marginPaddingZero;
     }
 }

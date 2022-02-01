@@ -1,36 +1,29 @@
 @import "./colorPalettes.scss";
+@import "../variables/variables.scss";
+@import "../mixins/mixins.scss";
 
 %btn {
+    @extend %columnCentered;
     border-radius: 50px;
     border: none;
     cursor: pointer;
-    font-family: $font-btn;
+    font-family: $font_btn;
     font-size: 22px;
-    margin-bottom: 41px 0;
-    padding: 5px;
-    width: 310px;
-    height: 64px;
-
-    @mixin forMediumScreens($breakpoint-medium, $breakpoint-large) {
-        width: 256px;
-    }
-
-    @include forLargeScreens($breakpoint-large) {
-        width: 256px;
-        margin: 10px;
-        padding: 10px 30px;
-    }
+    margin: 15px 35px;
+    padding: 15px 30px;
 
     &:active {
         border: 5px solid $color_alert;
+        padding: 10px 25px;
+
     }
 }
 
-%btn-white {
+%btnWhite {
     @extend %paletteWhiteContrast;
 }
 
-%btn-contrast {
+%btnContrast {
     @extend %paletteContrastWhite;
 
     &:hover {
@@ -46,4 +39,11 @@
 %articleBoxShadow {
     box-shadow: 0px 24px 78px rgba(0, 0, 0, 0.08), 0px 5.36071px 17.4223px rgba(0, 0, 0, 0.0238443),
         0px 1.59602px 5.18708px rgba(0, 0, 0, 0.0161557);
+}
+
+%imgFitted {
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
 }

@@ -1,0 +1,39 @@
+@import "../variables/variables.scss";
+@import "../mixins/mixins.scss";
+
+%textLarge {
+    font-family: $font_header;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+
+    @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+        font-size: 80px;
+        margin: 0 80px;
+    }
+
+    @include forLargeScreens($breakpoint-large) {
+        font-size: 80px;
+        margin: 0 0 0 40px;
+    }
+}
+
+%textDescription {
+    font-family: $font_description;
+    font-size: 22px;
+    line-height: 37px;
+}
+
+%textStandard {
+    font-family: $font_standard;
+    font-size: 24px;
+    line-height: 37px;
+    text-align: center;
+}
+
+%textLabel {
+    font-family: $font_description;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+}
