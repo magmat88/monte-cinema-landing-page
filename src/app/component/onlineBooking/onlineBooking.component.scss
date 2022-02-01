@@ -4,4 +4,124 @@
 
 .online-booking {
     @extend %columnCentered;
+    margin: 80px 0;
+    width: 90%;
+
+    .btn {
+        @extend %btn;
+        font-size: 14px;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            font-size: 18px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            font-size: 18px;
+        }
+    }
+
+    .btn-contrast {
+        @extend %btn-contrast;
+        width: 271px;
+        height: 56px;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            margin: 0 0 80px 0;
+            width: 472px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            margin: 0 0 80px 0;
+            width: 472px;
+        }
+    }
+
+    .inputField {
+        background-color: $color_light-input;
+        border-radius: 8px;
+        border: none;
+        color: $color_grey;
+        font-family: $font_standard;
+        font-size: 17px;
+        height: 55px;
+        margin: 10px 40px 40px 40px;
+        padding-left: 20px;
+        width: 251px;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            padding-left: 20px;
+            width: 452px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            padding-left: 20px;
+            width: 452px;
+        }
+    }
+
+    .notification {
+        @extend %columnCentered;
+        @extend %articleBoxShadow;
+        height: 380px;
+        padding: 60px;
+        width: 100%;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            border-radius: 24px;
+            width: 480px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            border-radius: 24px;
+            width: 480px;
+        }
+
+        p {
+            font-family: $font_standard;
+            font-size: 24px;
+            line-height: 37px;
+            text-align: center;
+        }
+    }
+
+    .notification-form {
+        @extend %columnCentered;
+    }
+
+    .notification-label {
+        color: $color_alert;
+        font-family: $font_description;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        margin: 0 0 0 80px;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    h1 {
+        font-family: $font_header;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 41px;
+        text-align: center;
+
+        @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
+            font-size: 80px;
+            line-height: 82px;
+            margin: 80px 80px 0 80px;
+        }
+
+        @include forLargeScreens($breakpoint-large) {
+            font-size: 80px;
+            line-height: 82px;
+            margin: 80px 80px 0 80px;
+        }
+    }
+
+    p {
+        font-family: $font_description;
+        font-size: 22px;
+        line-height: 37px;
+    }
 }

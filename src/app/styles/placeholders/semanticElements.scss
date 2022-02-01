@@ -6,7 +6,8 @@
     cursor: pointer;
     font-family: $font-btn;
     font-size: 22px;
-    margin-bottom: 41px;
+    margin-bottom: 41px 0;
+    padding: 5px;
     width: 310px;
     height: 64px;
 
@@ -22,7 +23,6 @@
 
     &:active {
         border: 5px solid $color_alert;
-        margin: 5px;
     }
 }
 
