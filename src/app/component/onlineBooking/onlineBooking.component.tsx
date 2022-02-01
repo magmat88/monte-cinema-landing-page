@@ -15,8 +15,15 @@ export function OnlineBooking(): JSX.Element {
                     as the machine will start.
                 </p>
                 <form className="notification-form">
-                    <label htmlFor="email" className="notification-label">Email</label>
-                    <input id="email"className="inputField" placeholder="e.g. mynameislaura@mail.com" />
+                    <label htmlFor="email" className="notification-label">
+                        Email
+                    </label>
+                    <input
+                        type="text"
+                        id="email"
+                        className="inputField"
+                        placeholder="e.g. mynameislaura@mail.com"
+                    />
                     <button className="btn btn-contrast">Let me know!</button>
                 </form>
             </article>
