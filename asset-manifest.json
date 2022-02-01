@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/monte-cinema-landing-page/static/css/main.b345eac2.css",
+    "main.js": "/monte-cinema-landing-page/static/js/main.0a6a5b4d.js",
+    "static/media/commando.png": "/monte-cinema-landing-page/static/media/commando.0e0dca591b82e148dbc7.png",
+    "static/media/predator.png": "/monte-cinema-landing-page/static/media/predator.b443d9e1ee557274c88b.png",
+    "static/media/audience.jpg": "/monte-cinema-landing-page/static/media/audience.080ed1d00f977389305c.jpg",
+    "static/media/terminator.png": "/monte-cinema-landing-page/static/media/terminator.cd600458fba875b2c712.png",
+    "index.html": "/monte-cinema-landing-page/index.html",
+    "main.b345eac2.css.map": "/monte-cinema-landing-page/static/css/main.b345eac2.css.map",
+    "main.0a6a5b4d.js.map": "/monte-cinema-landing-page/static/js/main.0a6a5b4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b345eac2.css",
+    "static/js/main.0a6a5b4d.js"
+  ]
+}
