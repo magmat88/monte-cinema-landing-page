@@ -111,6 +111,7 @@
         width: 100%;
     }
 
+    
     h1 {
         font-family: $font_header;
         font-size: 40px;
@@ -136,4 +137,9 @@
         font-size: 22px;
         line-height: 37px;
     }
+
+    .hidden {
+        display: none;
+    }
 }
+
