@@ -10,18 +10,15 @@
     .btn {
         @extend %btn;
         font-size: 16px;
-        height: 48px;
-        width: 110px;
+        // height: 48px;
     }
 
     .btn-contrast {
         @extend %btn-contrast;
-        width: 110px;
     }
 
     .btn-white {
         @extend %btn-white;
-        width: 140px;
     }
 
     .btns-container {

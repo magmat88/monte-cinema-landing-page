@@ -4,7 +4,7 @@
 
 .online-booking {
     @extend %columnCentered;
-    margin: 80px 0;
+    margin: 80px 0 120px 0;
     width: 90%;
 
     .btn {
@@ -39,7 +39,7 @@
     .inputField {
         background-color: $color_light-input;
         border-radius: 8px;
-        border: 1px solid $color_light-input;
+        border: none;
         color: $color_grey;
         font-family: $font_standard;
         font-size: 17px;
@@ -51,24 +51,29 @@
         @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
             padding-left: 20px;
             width: 452px;
+            &:hover {
+                background-color: $color_light-grey-input;
+            }
         }
 
         @include forLargeScreens($breakpoint-large) {
             padding-left: 20px;
             width: 452px;
+            &:hover {
+                background-color: $color_light-grey-input;
+            }
         }
 
-        &:hover {
-            background-color: $color_light-grey-input;
-            border: 1px solid $color_light-grey-input;
-
-        }
-
-        &:focus, &:active {
+        &:focus {
             outline: none;
             border: 1px solid $color_active;
             background-color: $color_active-light;
+            margin: 9px 39px 39px 39px;
         }
+
+        
+
+        
     }
 
     .notification {
@@ -112,27 +117,20 @@
     }
 
     
-    h1 {
-        font-family: $font_header;
-        font-size: 40px;
-        font-weight: 600;
+    .text-large {
+        @extend %text-header;
         line-height: 41px;
-        text-align: center;
 
         @include forMediumScreens($breakpoint-medium, $breakpoint-large) {
-            font-size: 80px;
             line-height: 82px;
-            margin: 80px 80px 0 80px;
         }
 
         @include forLargeScreens($breakpoint-large) {
-            font-size: 80px;
             line-height: 82px;
-            margin: 80px 80px 0 80px;
         }
     }
 
-    p {
+    .text-description {
         font-family: $font_description;
         font-size: 22px;
         line-height: 37px;
@@ -142,4 +140,3 @@
         display: none;
     }
 }
-
